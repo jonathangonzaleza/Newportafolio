@@ -3,3 +3,79 @@
     --link-color: #c3a0c1;
     --background-color: #1C1E22;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Para un scroll lento*/
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+/*Navbar*/
+nav {
+    display: flex;
+    justify-content: space-between;
+   align-items: center;
+    padding: 0 50px;
+    height: 80px;
+}
+
+nav .left a {
+    color: var(--text-color);
+    font-size: 22px;
+    font-weight: 600;
+}
+
+nav .right a {
+    color: var(--text-color);
+    margin: 0 10px;
+}
+/* a continuaciòn 2l ":last-child " significa que aplicarà
+ solo al ultimo enlace dentro de la clase "right"*/
+nav .right a:last-child {
+    color: var(--background-color);
+    background-color: var(--text-color);
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+nav .right a span {
+    margin-left: 5px;
+}
+
+/* Media query para dispositivos mas pequeños/ responsive*/
+@media (max-width: 600px) {
+    /*navbar*/
+    nav {
+        padding: 0 50px;
+    }
+
+    nav .right a {
+        font-size: 20px;
+    }
+
+    nav .right a:last-child {
+        color: var(--text-color);
+        background-color: transparent;
+        padding: 0;
+    }
+
+    nav .right a span {
+        display: none;
+    }
+}

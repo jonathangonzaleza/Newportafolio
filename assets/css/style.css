@@ -2,6 +2,8 @@
     --text-color: #ffff;
     --link-color: #c3a0c1;
     --background-color: #1C1E22;
+    --hover-color: #e9d5e8;
+    --hover-shadow: 0 0 10px rgba(195, 160, 193, 0.7);
 }
 
 * {
@@ -30,33 +32,98 @@ a {
 nav {
     display: flex;
     justify-content: space-between;
-   align-items: center;
+    align-items: center;
     padding: 0 50px;
     height: 80px;
 }
 
 nav .left a {
-    color: var(--text-color);
     font-size: 22px;
     font-weight: 600;
 }
 
 nav .right a {
-    color: var(--text-color);
+    color: var(--link-color);
     margin: 0 10px;
+    transition: color 0.3s ease; 
 }
-/* a continuaciòn 2l ":last-child " significa que aplicarà
- solo al ultimo enlace dentro de la clase "right"*/
+
 nav .right a:last-child {
-    color: var(--background-color);
-    background-color: var(--text-color);
+    background-color: var(--hover-color); 
+    color: var(--background-color); 
     padding: 5px 15px;
     border-radius: 5px;
+}
+
+nav .right a:last-child:hover {
+    box-shadow: var(--hover-shadow); 
+    transform: translateY(-2px);
+    background-color: #f0e0ef; 
+}
+
+nav .right a:not(:last-child):hover {
+    opacity: 0.9;
+    text-decoration: underline;
 }
 
 nav .right a span {
     margin-left: 5px;
 }
+
+/*Hero*/
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    margin: 50px 0;
+    gap: 40px;
+}
+
+.hero-section .text {
+    flex: 5;
+}
+
+.hero-section .text h1 {
+    font-size: 35px;
+}
+
+.hero-section .text h2 {
+    color: var(--link-color);
+}
+
+.hero-section .text .links {
+    margin-top: 25px;
+}
+
+.hero-section .text .links a {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 2px solid var(--link-color);
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: .2s;
+}
+
+.hero-section .text .links a:hover {
+    color: var(--hover-color);
+    border: 2px solid var(--hover-color);
+    box-shadow: var(--hover-shadow);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+.hero-section .headshot {
+    flex: 2;
+}
+
+.mifoto {
+    width: 100%;
+    max-width: 600px;   /* Crece hasta 600px pero no más */
+    height: auto;
+}
+
 
 /* Media query para dispositivos mas pequeños/ responsive*/
 @media (max-width: 600px) {
@@ -70,7 +137,7 @@ nav .right a span {
     }
 
     nav .right a:last-child {
-        color: var(--text-color);
+        color: var(--link-color);
         background-color: transparent;
         padding: 0;
     }

@@ -188,10 +188,10 @@ nav .right a span {
     margin-bottom: 40px;
 }
 
-.cards-conteiner {
+.cards-container {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 30px;
 }
 
@@ -200,10 +200,13 @@ nav .right a span {
     border: 1px solid rgba(211, 211, 211, 0.2);
     border-radius: 10px;
     width: 100%;
-    padding: 0;
     max-width: 400px;
+    padding: 10px;
+    margin: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden; 
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; 
 }
 
 .card:hover {
@@ -214,7 +217,7 @@ nav .right a span {
 
 .card h3 {
     color: var(--link-color);
-    margin-bottom: 10px;
+    margin: 10px 0;
 }
 
 .card p {
@@ -277,17 +280,6 @@ nav .right a span {
     margin: 0 auto;
 }
 
-.timeline::before {
-    content: '';
-    position: absolute;
-    left: 50px;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background-color: var(--link-color);
-    opacity: 0.3;
-}
-
 .timeline-item {
     display: flex;
     margin-bottom: 40px;
@@ -319,27 +311,17 @@ nav .right a span {
     padding-left: 20px;
 }
 
-.timeline-item::before {
-    content: '';
-    position: absolute;
-    left: 48px;
-    top: 5px;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: var(--link-color);
-    border: 2px solid var(--background-color);
-}
+
 
 /* Footer */
 .footer-section {
     background-color: rgba(0, 0, 0, 0.2);
-    padding: 50px;
+    padding: 20px;
     text-align: center;
 }
 
 .footer-section h2 {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-size: 35px;
 }
 
@@ -398,6 +380,15 @@ nav .right a span {
     .hero-section .headshot img{
         width: 300px;
     }
+    /*section 3: proyect*/
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        max-width: 100%;
+    }
+
     /*section 4: experience*/
     .timeline::before {
         left: 30px;
@@ -412,7 +403,7 @@ nav .right a span {
     }
     
     .footer-section {
-        padding: 50px 20px;
+        padding: 20px;
     }
     
     .contact-links {
@@ -435,7 +426,7 @@ nav .right a span {
     nav .right a:last-child {
         color: var(--link-color);
         background-color: transparent;
-        padding: 0;
+        padding: 5px;
     }
 
     nav .right a span {

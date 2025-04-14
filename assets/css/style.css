@@ -176,6 +176,202 @@ nav .right a span {
     font-size: 18px;
 }
 
+/*section 3: Proyectos*/
+.proyect-section {
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.proyect-section h2 {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+
+.cards-conteiner {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(211, 211, 211, 0.2);
+    border-radius: 10px;
+    width: 100%;
+    padding: 0;
+    max-width: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; 
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--hover-shadow);
+    border-color: var(--link-color);
+}
+
+.card h3 {
+    color: var(--link-color);
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.card-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 15px;
+    background-color: var(--link-color);
+    color: var(--background-color);
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.card-btn:hover {
+    background-color: var(--hover-color);
+    box-shadow: var(--hover-shadow);
+}
+
+.card-image-container {
+    height: 180px;
+    overflow: hidden;
+}
+
+.card-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card:hover .card-image-container img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 20px;
+}
+
+/*section 4: experience*/
+.experience-section {
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.experience-section h2 {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: var(--link-color);
+    opacity: 0.3;
+}
+
+.timeline-item {
+    display: flex;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.timeline-date {
+    width: 100px;
+    font-weight: 600;
+    color: var(--link-color);
+}
+
+.timeline-content {
+    flex: 1;
+    padding-left: 30px;
+}
+
+.timeline-content h3 {
+    margin-bottom: 10px;
+    color: var(--link-color);
+}
+
+.timeline-content p, .timeline-content ul {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.timeline-content ul {
+    padding-left: 20px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 48px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--link-color);
+    border: 2px solid var(--background-color);
+}
+
+/* Footer */
+.footer-section {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 50px;
+    text-align: center;
+}
+
+.footer-section h2 {
+    margin-bottom: 30px;
+    font-size: 35px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border: 1px solid rgba(211, 211, 211, 0.2);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    border-color: var(--link-color);
+    box-shadow: var(--hover-shadow);
+    transform: translateY(-3px);
+}
+
+.copyright {
+    opacity: 0.7;
+    font-size: 14px;
+}
+
 @media (max-width: 800px) {
     /*section 1: hero*/
     .hero-section .text h1 {
@@ -193,7 +389,7 @@ nav .right a span {
     }
 }
 
-@media (max-width: 740px) {
+@media (max-width: 768px) {
     /*section 1: hero*/
     .hero-section {
         flex-direction: column-reverse;
@@ -201,6 +397,28 @@ nav .right a span {
 
     .hero-section .headshot img{
         width: 300px;
+    }
+    /*section 4: experience*/
+    .timeline::before {
+        left: 30px;
+    }
+    
+    .timeline-date {
+        width: 60px;
+    }
+    
+    .timeline-item::before {
+        left: 28px;
+    }
+    
+    .footer-section {
+        padding: 50px 20px;
+    }
+    
+    .contact-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
     }
 }
 

@@ -453,3 +453,106 @@ nav .right a span {
     }
 
 }
+
+/* Estilos específicos para la página de proyecto */
+
+/*Section 1: header*/
+
+.project-header {
+    padding: 60px 50px 50px;
+    text-align: center;
+}
+
+.project-header p {
+    margin: 20px;
+}
+
+/*Section 2 y 3 : project section and user person */
+.project-section {
+    padding: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-section img {
+    width: 100%;
+    border-radius: 8px;
+    margin: 30px 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.two-columns {
+    display: flex;
+    gap: 40px;
+    margin: 50px 0;
+}
+
+.column {
+    flex: 1;
+}
+
+.user-personas {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.user-persona-desktop {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.user-persona-desktop img {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.user-persona-desktop img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(195, 160, 193, 0.25);
+}
+
+.user-persona-mobile {
+    display: none;
+}
+
+ul.feature-list {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+ul.feature-list li {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .two-columns {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .project-header, .project-section {
+        padding: 40px 20px;
+    }
+
+    .user-persona-desktop {
+        display: none;
+    }
+    
+    .user-persona-mobile {
+        display: block;
+    }
+    
+    .user-persona-mobile img {
+        width: 100%;
+        border-radius: 12px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+
+}
